@@ -1,0 +1,124 @@
+\PassOptionsToPackage{svgnames}{xcolor}
+
+\documentclass[10pt]{book}
+
+\usepackage[fleqn]{amsmath}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{titlesec}
+\usepackage{tikz}
+\usepackage{xpatch}
+
+\tcbuselibrary{skins,breakable}
+\usetikzlibrary{shadings,shadows}
+
+%----------------------------------------------
+% Bloques
+%----------------------------------------------
+
+\newenvironment{myexampleblock}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,
+    colback=LightGreen,colframe=DarkGreen,%
+    colbacklower=LimeGreen!75!LightGreen,%
+    title=#1]}%
+    {\endtcolorbox}
+
+\newenvironment{myalertblock}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,
+    colback=LightCoral,colframe=DarkRed,%
+    colbacklower=Tomato!75!LightCoral,%
+    title=#1]}%
+    {\endtcolorbox}
+
+\newenvironment{myblock}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,
+    colback=LightBlue,colframe=DarkBlue,%
+    colbacklower=DarkBlue!75!LightBlue,%
+    title=#1]}%
+	{\endtcolorbox}
+	
+%----------------------------------------------
+% Modificaciones
+%----------------------------------------------
+
+\renewcommand{\lstlistingname}{Código}% Listing -> Codigo
+\renewcommand{\lstlistlistingname}{Lista de \lstlistingname s}% List of Listings -> Lista de Códigos
+
+%----------------------------------------------
+% Índice
+%----------------------------------------------
+
+\hypersetup{colorlinks=true, linktoc=all, linkcolor=black,}
+
+%----------------------------------------------
+% Sangría
+%----------------------------------------------
+
+%Textos
+\setlength{\parindent}{0mm}
+
+%Ecuaciones
+\setlength{\mathindent}{0mm}
+\setlength{\jot}{-0.3mm}
+
+\xapptocmd\normalsize{%
+	\abovedisplayskip=0mm
+	\abovedisplayshortskip=0mm
+	\belowdisplayskip=2mm
+	\belowdisplayshortskip=0mm
+}{}{}
+
+%----------------------------------------------
+% Autor
+%----------------------------------------------
+
+\title{\huge Nombre del Apunte}
+\author{Autor}
+\date{Ultima Actualización: \today}
+
+%----------------------------------------------
+% Documento
+%----------------------------------------------
+
+\begin{document}
+	%Portada
+	\maketitle
+	%Fin portada
+	
+	%Indice
+	\tableofcontents
+	%Fin indice
+	
+	%Contenido
+	\part{Primera Parte}
+
+		\chapter{Capitulo 1}
+			\input{Contents/PrimerContenido.tex}
+
+		\chapter{Capitulo 2}
+			\input{Contents/SegundoContenido.tex}
+
+	
+	%Fin contenido
+	
+	%Índice de figuras
+	\listoffigures
+	%Fin índice de figuras
+	
+	%Índice de listings
+	\lstlistoflistings
+	%Fin índice de listings
+	
+	%Contraportada
+	\input{Pages/Contraportada.tex}
+	%Fin contraportada
+	
+\end{document}
