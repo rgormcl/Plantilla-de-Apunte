@@ -12,60 +12,130 @@
 \usepackage{tcolorbox}
 \usepackage{titlesec}
 \usepackage{tikz}
+\usepackage{tocloft}
 \usepackage{xpatch}
 
 \tcbuselibrary{skins,breakable}
 \usetikzlibrary{shadings,shadows}
 
+% Avoid vertical justification.
+\raggedbottom 
+
+% Path of external resource (images, etc).
+\graphicspath{ {Files/} }
+
 %----------------------------------------------
-% Bloques
+% New Commands.
 %----------------------------------------------
 
-\newenvironment{myexampleblock}[1]{%
-    \tcolorbox[beamer,%
-    noparskip,breakable,
-    colback=LightGreen,colframe=DarkGreen,%
-    colbacklower=LimeGreen!75!LightGreen,%
-    title=#1]}%
-    {\endtcolorbox}
+\newcommand{\refcolor}{black}
+\newcommand{\separation}[0]{\vspace{2mm}}
 
-\newenvironment{myalertblock}[1]{%
-    \tcolorbox[beamer,%
-    noparskip,breakable,
-    colback=LightCoral,colframe=DarkRed,%
-    colbacklower=Tomato!75!LightCoral,%
-    title=#1]}%
-    {\endtcolorbox}
-
-\newenvironment{myblock}[1]{%
-    \tcolorbox[beamer,%
-    noparskip,breakable,
-    colback=LightBlue,colframe=DarkBlue,%
-    colbacklower=DarkBlue!75!LightBlue,%
-    title=#1]}%
-	{\endtcolorbox}
-	
 %----------------------------------------------
-% Modificaciones
+% Renew Commands.
 %----------------------------------------------
 
 \renewcommand{\lstlistingname}{Código}% Listing -> Codigo
 \renewcommand{\lstlistlistingname}{Lista de \lstlistingname s}% List of Listings -> Lista de Códigos
 
 %----------------------------------------------
-% Índice
+% Blocks.
 %----------------------------------------------
 
-\hypersetup{colorlinks=true, linktoc=all, linkcolor=black,}
+\newenvironment{definitionblock}[1]{%
+	\tcolorbox[beamer,%
+    noparskip,breakable,
+    colback=WhiteSmoke,colframe=Olive,%
+    colbacklower=Olive!75!WhiteSmoke,%
+	title=\definition{#1}]}%
+	{\endtcolorbox}
+	
+\newenvironment{exampleblock}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,
+    colback=WhiteSmoke,colframe=DarkGreen,%
+    colbacklower=LimeGreen!75!WhiteSmoke,%
+    title=\example{#1}]}%
+    {\endtcolorbox}
+
+\newenvironment{alertblock}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,
+    colback=WhiteSmoke,colframe=DarkRed,%
+    colbacklower=Tomato!75!WhiteSmoke,%
+    title=\alert{#1}]}%
+    {\endtcolorbox}
+
+\newenvironment{infoblock}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,
+    colback=WhiteSmoke,colframe=DarkBlue,%
+    colbacklower=DarkBlue!75!WhiteSmoke,%
+    title=\info{#1}]}%
+	{\endtcolorbox}
 
 %----------------------------------------------
-% Sangría
+% List of Blocks.
 %----------------------------------------------
 
-%Textos
+% Definition List.
+\newcommand{\listdefinitionname}{Lista de Definiciones}
+\newlistof[chapter]{definition}{def}{\listdefinitionname}
+
+\newcommand{\definition}[1]{%
+\hypersetup{linkcolor=white}%
+\refstepcounter{definition}
+\par\noindent\textbf{Definición \thedefinition. #1}
+\addcontentsline{def}{definition}{\protect\numberline{\thedefinition}#1}\par%
+\hypersetup{linkcolor=linkcolor}}
+
+% Example List.
+\newcommand{\listexamplesname}{Lista de Ejemplos}
+\newlistof[chapter]{example}{examp}{\listexamplesname}
+
+\newcommand{\example}[1]{%
+\hypersetup{linkcolor=white}%
+\refstepcounter{example}
+\par\noindent\textbf{Ejemplo \theexample. #1}
+\addcontentsline{examp}{example}{\protect\numberline{\theexample}#1}\par%
+\hypersetup{linkcolor=linkcolor}}
+
+% Alert List.
+\newcommand{\listalertname}{Lista de Alertas}
+\newlistof[chapter]{alert}{alt}{\listalertname}
+
+\newcommand{\alert}[1]{%
+\hypersetup{linkcolor=white}%
+\refstepcounter{alert}
+\par\noindent\textbf{Alerta \thealert. #1}
+\addcontentsline{alt}{alert}{\protect\numberline{\thealert}#1}\par%
+\hypersetup{linkcolor=linkcolor}}
+
+% Information List.
+\newcommand{\listinfoname}{Lista de Informaciones}
+\newlistof[chapter]{info}{inf}{\listinfoname}
+
+\newcommand{\info}[1]{%
+\hypersetup{linkcolor=white}%
+\refstepcounter{info}
+\par\noindent\textbf{Información \theinfo. #1}
+\addcontentsline{inf}{alert}{\protect\numberline{\theinfo}#1}\par%
+\hypersetup{linkcolor=linkcolor}}
+
+%----------------------------------------------
+% Ref. Style.
+%----------------------------------------------
+
+\hypersetup{colorlinks=true, linktoc=all, linkcolor=\refcolor,}
+
+%----------------------------------------------
+% Indenting.
+%----------------------------------------------
+
+% Text.
 \setlength{\parindent}{0mm}
 
-%Ecuaciones
+% Equations.
 \setlength{\mathindent}{0mm}
 \setlength{\jot}{-0.3mm}
 
@@ -76,8 +146,13 @@
 	\belowdisplayshortskip=0mm
 }{}{}
 
+% Chapter.
+\titlespacing*{\chapter}{0pt}{0pt}{10pt}
+\titleformat{\chapter}[hang]
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter:}{1em}{}
+
 %----------------------------------------------
-% Autor
+% Author.
 %----------------------------------------------
 
 \title{\huge Nombre del Apunte}
@@ -85,40 +160,56 @@
 \date{Ultima Actualización: \today}
 
 %----------------------------------------------
-% Documento
+% Document.
 %----------------------------------------------
 
 \begin{document}
-	%Portada
+	% Cover page.
 	\maketitle
-	%Fin portada
+	% End Cover page.
 	
-	%Indice
+	% Index.
 	\tableofcontents
-	%Fin indice
+	% End Index.
 	
-	%Contenido
-	\part{Primera Parte}
+	% Body.
+	\part{Introducción}
 
-		\chapter{Capitulo 1}
+		\chapter{Lenguajes de Programación}
 			\input{Contents/PrimerContenido.tex}
-
-		\chapter{Capitulo 2}
+		
+		\chapter{Matemáticas}
 			\input{Contents/SegundoContenido.tex}
 
 	
-	%Fin contenido
+	% End Body.
 	
-	%Índice de figuras
+	% Index of figures.
+	\newpage
 	\listoffigures
-	%Fin índice de figuras
-	
-	%Índice de listings
+	% End Index of figures.
+
+	% Index of blocks.
+	\newpage
+	\listofdefinition
+
+	\newpage
+	\listofexample
+
+	\newpage
+	\listofalert
+
+	\newpage
+	\listofinfo
+	% End Index of blocks.
+
+	% Index of listings
+	\newpage
 	\lstlistoflistings
-	%Fin índice de listings
+	% End Index of Blocks.
 	
-	%Contraportada
+	% Back cover.
 	\input{Pages/Contraportada.tex}
-	%Fin contraportada
+	% End Back cover.
 	
 \end{document}

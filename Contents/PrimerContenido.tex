@@ -1,3 +1,54 @@
-\begin{myblock}{Example of \texttt{myblock}}
-    \lipsum[2-3]
-\end{myblock}
+\section{Java™}
+
+\lipsum[2-3]
+
+\lstset{language=Java, caption={Hola Mundo en Java™}, showstringspaces=false}
+\begin{lstlisting}[frame=single]
+public class Example{
+    public static void main(String[] args){
+        System.out.println("Hola Mundo");
+    }
+}
+\end{lstlisting}
+
+\lipsum[1-2]
+
+\section{Python™}
+
+\lipsum[1-2]
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.5\textwidth]{python-logo}
+    \caption{El logotipo de Python™}
+    \label{fig_u1_3}
+\end{figure}
+
+
+\lipsum[2-3]
+
+\separation
+\begin{alertblock}{¡Error de principiante!}
+    \lstset{language=Python, caption={Error en Python™}, showstringspaces=false}
+    \begin{lstlisting}[frame=single]
+number_one = 12
+number_two = number_one
+number_one +=1
+print(number_two) # Output: 12
+
+list_a = [1,2,3,4]
+list_b = list_a
+list_a += [5]
+print(list_b)  #Output: [1,2,3,4,5]
+
+    \end{lstlisting}
+\end{alertblock}
+
+\separation
+\lipsum[2-3]
+
+\separation
+\begin{infoblock}{Python™ 2 está deprecado}
+En enero de 2020 termino el soporte para \textit{Python™ 2} dejandolo oficialmente deprecado\footnote{Fuente: \href{https://www.python.org/doc/sunset-python-2/}{https://www.python.org/doc/sunset-python-2/}}.
+\end{infoblock}
+
