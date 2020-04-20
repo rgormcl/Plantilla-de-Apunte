@@ -4,14 +4,15 @@
 
 \usepackage[fleqn]{amsmath}
 \usepackage[spanish]{babel}
+\usepackage{float}
 \usepackage[T1]{fontenc}
 \usepackage{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum}
 \usepackage{listings}
 \usepackage{tcolorbox}
-\usepackage{titlesec}
 \usepackage{tikz}
+\usepackage{titlesec}
 \usepackage{tocloft}
 \usepackage{xpatch}
 
@@ -36,7 +37,7 @@
 %----------------------------------------------
 
 \renewcommand{\lstlistingname}{Código}% Listing -> Codigo
-\renewcommand{\lstlistlistingname}{Lista de \lstlistingname s}% List of Listings -> Lista de Códigos
+\renewcommand{\lstlistlistingname}{Índice de \lstlistingname s}% List of Listings -> Índice de Códigos
 
 %----------------------------------------------
 % Blocks.
@@ -79,7 +80,7 @@
 %----------------------------------------------
 
 % Definition List.
-\newcommand{\listdefinitionname}{Lista de Definiciones}
+\newcommand{\listdefinitionname}{Índice de Definiciones}
 \newlistof[chapter]{definition}{def}{\listdefinitionname}
 
 \newcommand{\definition}[1]{%
@@ -90,7 +91,7 @@
 \hypersetup{linkcolor=linkcolor}}
 
 % Example List.
-\newcommand{\listexamplesname}{Lista de Ejemplos}
+\newcommand{\listexamplesname}{Índice de Ejemplos}
 \newlistof[chapter]{example}{examp}{\listexamplesname}
 
 \newcommand{\example}[1]{%
@@ -101,7 +102,7 @@
 \hypersetup{linkcolor=linkcolor}}
 
 % Alert List.
-\newcommand{\listalertname}{Lista de Alertas}
+\newcommand{\listalertname}{Índice de Alertas}
 \newlistof[chapter]{alert}{alt}{\listalertname}
 
 \newcommand{\alert}[1]{%
@@ -112,7 +113,7 @@
 \hypersetup{linkcolor=linkcolor}}
 
 % Information List.
-\newcommand{\listinfoname}{Lista de Informaciones}
+\newcommand{\listinfoname}{Índice de Informaciones}
 \newlistof[chapter]{info}{inf}{\listinfoname}
 
 \newcommand{\info}[1]{%
@@ -132,8 +133,8 @@
 % Indenting.
 %----------------------------------------------
 
-% Text.
-\setlength{\parindent}{0mm}
+% Text Indenting (Sangría).
+\setlength{\parindent}{2mm}
 
 % Equations.
 \setlength{\mathindent}{0mm}
@@ -184,6 +185,11 @@
 	
 	% End Body.
 	
+	% Index of tables.
+	\newpage
+	\listoftables
+	% End Index of tables.
+
 	% Index of figures.
 	\newpage
 	\listoffigures
@@ -191,13 +197,13 @@
 
 	% Index of blocks.
 	\newpage
+	\listofalert
+	
+	\newpage
 	\listofdefinition
 
 	\newpage
 	\listofexample
-
-	\newpage
-	\listofalert
 
 	\newpage
 	\listofinfo

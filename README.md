@@ -9,5 +9,4 @@ Una plantilla desarrollada en LaTeX para tus apuntes de clases o ramos.
 
 ## Errores
 
-Si encuentras un error en la plantilla no dudes en publicar un `issue`.
-
+Si encuentras un error en la plantilla no dudes en publicar un `issue`.  
