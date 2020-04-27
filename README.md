@@ -1,22 +1,42 @@
 # Plantilla de Apunte
 
+[![GitHub issues](https://img.shields.io/github/issues/rgormcl/Plantilla-de-Apunte)](https://github.com/rgormcl/Plantilla-de-Apunte/issues)
+[![GitHub forks](https://img.shields.io/github/forks/rgormcl/Plantilla-de-Apunte)](https://github.com/rgormcl/Plantilla-de-Apunte/network)
+[![GitHub stars](https://img.shields.io/github/stars/rgormcl/Plantilla-de-Apunte)](https://github.com/rgormcl/Plantilla-de-Apunte/stargazers)
+[![GitHub license](https://img.shields.io/github/license/rgormcl/Plantilla-de-Apunte)](https://github.com/rgormcl/Plantilla-de-Apunte/blob/master/LICENSE)
+[![Version](https://img.shields.io/badge/version-2.3-green)](https://github.com/rgormcl/Plantilla-de-Apunte/releases)
+
 Una plantilla desarrollada en LaTeX para tus apuntes de clases o ramos.
 
 ## Features
 
-1. Bloques para estructurar el documento: "Alerta", "Definición", "Ejemplo" y "Info".  
+1. Bloques para estructurar el documento: "Alerta", "Definición", "Ejemplo" y "Info":  
 
-2. Soporte para añadir bloques de código fuente dentro del documento de manera ordenada y limpia utilizando `listings`.
+    ```tex
+    \begin{exampleblock}{Bloque}
+        Aquí van tus ejemplos
+    \end{exampleblock}
+    ```
 
-3. Índices para cada uno de los bloques, tablas, figuras y listings (bloques con código fuente).
+2. Índices para cada uno de los bloques, tablas, figuras y listings (bloques con código fuente).
 
-4. Sangría e indentación del texto y títulos mejorada.
+3. Soporte para añadir bloques sin índice:  
 
-5. Algunos comandos utiles (por ejemplo `\separation` que entrega una separación vertical de 2mm).  
+    ```tex
+    \begin{exampleblock*}{Este bloque no tiene indice}
+        Efectivamente.
+    \end{exampleblock*}
+    ```
 
-6. Separación del cuerpo del documento, archivos externos y lógica de la plantilla.
+4. Soporte para añadir bloques de código fuente dentro del documento de manera ordenada y limpia utilizando `listings`.
 
-7. Código fuente de la plantilla escrito de manera limpia y ordenada.
+5. Sangría e indentación del texto y títulos mejorada.
+
+6. Algunos comandos utiles (por ejemplo `\separation` que entrega una separación vertical de 2mm).  
+
+7. Separación del cuerpo del documento, archivos externos y lógica de la plantilla.
+
+8. Código fuente de la plantilla escrito de manera limpia y ordenada.
 
 ## Demostración y Ejemplos
 

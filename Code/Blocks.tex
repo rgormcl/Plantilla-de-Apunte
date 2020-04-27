@@ -1,0 +1,111 @@
+%----------------------------------------------
+% Blocks.
+%----------------------------------------------
+
+\newenvironment{definitionblock}[1]{%
+	\tcolorbox[beamer,%
+    noparskip,breakable,%
+    colback=WhiteSmoke,colframe=Olive,%
+    colbacklower=Olive!75!WhiteSmoke,%
+	title=\definition{#1}]}%
+	{\endtcolorbox}
+	
+\newenvironment{exampleblock}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,%
+    colback=WhiteSmoke,colframe=DarkGreen,%
+    colbacklower=LimeGreen!75!WhiteSmoke,%
+    title=\example{#1}]}%
+    {\endtcolorbox}
+
+\newenvironment{alertblock}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,%
+    colback=WhiteSmoke,colframe=DarkRed,%
+    colbacklower=Tomato!75!WhiteSmoke,%
+    title=\alert{#1}]}%
+    {\endtcolorbox}
+
+\newenvironment{infoblock}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,%
+    colback=WhiteSmoke,colframe=DarkBlue,%
+    colbacklower=DarkBlue!75!WhiteSmoke,%
+    title=\info{#1}]}%
+    {\endtcolorbox}
+    
+%----------------------------------------------
+% Unlisted Blocks
+%----------------------------------------------
+
+\newenvironment{definitionblock*}[1]{%
+	\tcolorbox[beamer,%
+    noparskip,breakable,%
+    colback=WhiteSmoke,colframe=Olive,%
+    colbacklower=Olive!75!WhiteSmoke,%
+	title=\whiteref{#1}]}%
+	{\endtcolorbox}
+	
+\newenvironment{exampleblock*}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,%
+    colback=WhiteSmoke,colframe=DarkGreen,%
+    colbacklower=LimeGreen!75!WhiteSmoke,%
+    title=\whiteref{#1}]}%
+	{\endtcolorbox}
+
+\newenvironment{alertblock*}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,%
+    colback=WhiteSmoke,colframe=DarkRed,%
+    colbacklower=Tomato!75!WhiteSmoke,%
+    title=\whiteref{#1}]}%
+    {\endtcolorbox}
+
+\newenvironment{infoblock*}[1]{%
+    \tcolorbox[beamer,%
+    noparskip,breakable,%
+    colback=WhiteSmoke,colframe=DarkBlue,%
+    colbacklower=DarkBlue!75!WhiteSmoke,%
+    title=\whiteref{#1}]}%
+    {\endtcolorbox}
+    
+%----------------------------------------------
+% List of Blocks.
+%----------------------------------------------
+
+% Definition List.
+\newcommand{\listdefinitionname}{Índice de Definiciones}
+\newlistof[chapter]{definition}{def}{\listdefinitionname}
+
+\newcommand{\definition}[1]{%
+\refstepcounter{definition}
+\par\noindent\textbf{Definición \thedefinition.} \whiteref{#1}
+\addcontentsline{def}{definition}{\protect\numberline{\thedefinition}#1}\par}
+
+% Example List.
+\newcommand{\listexamplesname}{Índice de Ejemplos}
+\newlistof[chapter]{example}{examp}{\listexamplesname}
+
+\newcommand{\example}[1]{%
+\refstepcounter{example}
+\par\noindent\textbf{Ejemplo \theexample.} \whiteref{#1}
+\addcontentsline{examp}{example}{\protect\numberline{\theexample}#1}\par}
+
+% Alert List.
+\newcommand{\listalertname}{Índice de Alertas}
+\newlistof[chapter]{alert}{alt}{\listalertname}
+
+\newcommand{\alert}[1]{%
+\refstepcounter{alert}
+\par\noindent\textbf{Alerta \thealert.} \whiteref{#1}
+\addcontentsline{alt}{alert}{\protect\numberline{\thealert}#1}\par}
+
+% Information List.
+\newcommand{\listinfoname}{Índice de Informaciones}
+\newlistof[chapter]{info}{inf}{\listinfoname}
+
+\newcommand{\info}[1]{%
+\refstepcounter{info}
+\par\noindent\textbf{Información \theinfo.} \whiteref{#1}
+\addcontentsline{inf}{alert}{\protect\numberline{\theinfo}#1}\par}

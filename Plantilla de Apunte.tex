@@ -19,17 +19,15 @@
 \tcbuselibrary{skins,breakable}
 \usetikzlibrary{shadings,shadows}
 
+%----------------------------------------------
+% Configs. 
+%----------------------------------------------
+
 % Avoid vertical justification.
 \raggedbottom 
 
 % Path of external resource (images, etc).
 \graphicspath{ {Files/} }
-
-% Index.
-% -1 part     1 section     3 subsubsection  5 subparagraph
-% 0 chapter   2 subsection  4 paragraph
-\setcounter{tocdepth}{3}
-\setcounter{secnumdepth}{3}
 
 %----------------------------------------------
 % New Commands.
@@ -37,103 +35,29 @@
 
 \newcommand{\refcolor}{black}
 \newcommand{\separation}[0]{\vspace{2mm}}
+\newcommand{\whiteref}[1]{\hypersetup{linkcolor=white}\textbf{#1}\hypersetup{linkcolor=linkcolor}}
+
+% ---------------------------------------------
+% Code.
+% ---------------------------------------------
+
+% Listings.
+\input{Code/Listings.tex}
+
+% Blocks
+\input{Code/Blocks.tex}
 
 %----------------------------------------------
-% Renew Commands.
+% Index.
 %----------------------------------------------
 
-\renewcommand{\lstlistingname}{Código}% Listing -> Codigo
-\renewcommand{\lstlistlistingname}{Índice de \lstlistingname s}% List of Listings -> Índice de Códigos
-
-%----------------------------------------------
-% Blocks.
-%----------------------------------------------
-
-\newenvironment{definitionblock}[1]{%
-	\tcolorbox[beamer,%
-    noparskip,breakable,
-    colback=WhiteSmoke,colframe=Olive,%
-    colbacklower=Olive!75!WhiteSmoke,%
-	title=\definition{#1}]}%
-	{\endtcolorbox}
-	
-\newenvironment{exampleblock}[1]{%
-    \tcolorbox[beamer,%
-    noparskip,breakable,
-    colback=WhiteSmoke,colframe=DarkGreen,%
-    colbacklower=LimeGreen!75!WhiteSmoke,%
-    title=\example{#1}]}%
-    {\endtcolorbox}
-
-\newenvironment{alertblock}[1]{%
-    \tcolorbox[beamer,%
-    noparskip,breakable,
-    colback=WhiteSmoke,colframe=DarkRed,%
-    colbacklower=Tomato!75!WhiteSmoke,%
-    title=\alert{#1}]}%
-    {\endtcolorbox}
-
-\newenvironment{infoblock}[1]{%
-    \tcolorbox[beamer,%
-    noparskip,breakable,
-    colback=WhiteSmoke,colframe=DarkBlue,%
-    colbacklower=DarkBlue!75!WhiteSmoke,%
-    title=\info{#1}]}%
-	{\endtcolorbox}
-
-%----------------------------------------------
-% List of Blocks.
-%----------------------------------------------
-
-% Definition List.
-\newcommand{\listdefinitionname}{Índice de Definiciones}
-\newlistof[chapter]{definition}{def}{\listdefinitionname}
-
-\newcommand{\definition}[1]{%
-\hypersetup{linkcolor=white}%
-\refstepcounter{definition}
-\par\noindent\textbf{Definición \thedefinition. #1}
-\addcontentsline{def}{definition}{\protect\numberline{\thedefinition}#1}\par%
-\hypersetup{linkcolor=linkcolor}}
-
-% Example List.
-\newcommand{\listexamplesname}{Índice de Ejemplos}
-\newlistof[chapter]{example}{examp}{\listexamplesname}
-
-\newcommand{\example}[1]{%
-\hypersetup{linkcolor=white}%
-\refstepcounter{example}
-\par\noindent\textbf{Ejemplo \theexample. #1}
-\addcontentsline{examp}{example}{\protect\numberline{\theexample}#1}\par%
-\hypersetup{linkcolor=linkcolor}}
-
-% Alert List.
-\newcommand{\listalertname}{Índice de Alertas}
-\newlistof[chapter]{alert}{alt}{\listalertname}
-
-\newcommand{\alert}[1]{%
-\hypersetup{linkcolor=white}%
-\refstepcounter{alert}
-\par\noindent\textbf{Alerta \thealert. #1}
-\addcontentsline{alt}{alert}{\protect\numberline{\thealert}#1}\par%
-\hypersetup{linkcolor=linkcolor}}
-
-% Information List.
-\newcommand{\listinfoname}{Índice de Informaciones}
-\newlistof[chapter]{info}{inf}{\listinfoname}
-
-\newcommand{\info}[1]{%
-\hypersetup{linkcolor=white}%
-\refstepcounter{info}
-\par\noindent\textbf{Información \theinfo. #1}
-\addcontentsline{inf}{alert}{\protect\numberline{\theinfo}#1}\par%
-\hypersetup{linkcolor=linkcolor}}
-
-%----------------------------------------------
 % Ref. Style.
-%----------------------------------------------
-
 \hypersetup{colorlinks=true, linktoc=all, linkcolor=\refcolor,}
+
+% -1 part     1 section     3 subsubsection  5 subparagraph
+% 0 chapter   2 subsection  4 paragraph
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
 
 %----------------------------------------------
 % Indenting.
@@ -187,8 +111,7 @@
 		
 		\chapter{Matemáticas}
 			\input{Contents/SegundoContenido.tex}
-
-	
+			
 	% End Body.
 	
 	% Index of tables.

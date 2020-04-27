@@ -2,8 +2,7 @@
 
 \lipsum[2-3]
 
-\lstset{language=Java, caption={Hola Mundo en Java™}, showstringspaces=false}
-\begin{lstlisting}[frame=single]
+\begin{lstlisting}[language=Java, caption={Hola Mundo en Java™}]
 public class Example{
     public static void main(String[] args){
         System.out.println("Hola Mundo");
@@ -13,14 +12,14 @@ public class Example{
 
 \lipsum[1-2]
 
-\section{Python™}
+\section{Python}
 
 \lipsum[1-2]
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{python-logo}
-    \caption{El logotipo de Python™}
+    \caption{El logotipo de Python}
     \label{fig_1}
 \end{figure}
 
@@ -28,8 +27,10 @@ public class Example{
 
 \separation
 \begin{alertblock}{¡Error de principiante!}
-    \lstset{language=Python, caption={Error en Python™}, showstringspaces=false}
-    \begin{lstlisting}[frame=single]
+    \lipsum[4-5]
+
+    \separation
+\begin{lstlisting}[language=Python, caption={Error en Python}]
 number_one = 12
 number_two = number_one
 number_one +=1
@@ -39,15 +40,24 @@ list_a = [1,2,3,4]
 list_b = list_a
 list_a += [5]
 print(list_b)  #Output: [1,2,3,4,5]
+\end{lstlisting}
 
-    \end{lstlisting}
 \end{alertblock}
 
 \separation
 \lipsum[2-3]
 
 \separation
-\begin{infoblock}{Python™ 2 está deprecado}
-En enero de 2020 termino el soporte para \textit{Python™ 2} dejandolo oficialmente deprecado\footnote{Fuente: \href{https://www.python.org/doc/sunset-python-2/}{https://www.python.org/doc/sunset-python-2/}}.
+\begin{infoblock}{Python 2 está deprecado}
+En enero de 2020 termino el soporte para \textit{Python 2} dejandolo oficialmente deprecado\footnote{Fuente: \href{https://www.python.org/doc/sunset-python-2/}{https://www.python.org/doc/sunset-python-2/}}.
 \end{infoblock}
 
+\separation
+\lipsum[1-2]
+
+\separation
+\begin{infoblock*}{Un información no tan importante}
+$a = a + 1$ \\
+Es equivalente a: \\
+$a += 1$
+\end{infoblock*}
