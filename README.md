@@ -1,22 +1,10 @@
 # Plantilla de Apunte
 
-<div style="text-align:center">
-    <a href="https://github.com/rgormcl/Plantilla-de-Apunte/issues">
-        <img alt="GitHub issues" src="https://img.shields.io/github/issues/rgormcl/Plantilla-de-Apunte">
-    </a>
-    <a href="https://github.com/rgormcl/Plantilla-de-Apunte/network">
-        <img alt="GitHub forks" src="https://img.shields.io/github/forks/rgormcl/Plantilla-de-Apunte">
-    </a>
-    <a href="https://github.com/rgormcl/Plantilla-de-Apunte/stargazers">
-        <img alt="GitHub stars" src="https://img.shields.io/github/stars/rgormcl/Plantilla-de-Apunte">
-    </a>
-    <a href="https://github.com/rgormcl/Plantilla-de-Apunte/blob/master/LICENSE">
-        <img alt="GitHub license" src="https://img.shields.io/github/license/rgormcl/Plantilla-de-Apunte">
-    </a>
-    <a href="https://github.com/rgormcl/Plantilla-de-Apunte/releases/latest">
-        <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/rgormcl/Plantilla-de-Apunte">
-    </a>
-</div>
+[![GitHub issues](https://img.shields.io/github/issues/rgormcl/Plantilla-de-Apunte)](https://github.com/rgormcl/Plantilla-de-Apunte/issues)
+[![GitHub forks](https://img.shields.io/github/forks/rgormcl/Plantilla-de-Apunte)](https://github.com/rgormcl/Plantilla-de-Apunte/network)
+[![GitHub stars](https://img.shields.io/github/stars/rgormcl/Plantilla-de-Apunte)](https://github.com/rgormcl/Plantilla-de-Apunte/stargazers)
+[![GitHub license](https://img.shields.io/github/license/rgormcl/Plantilla-de-Apunte)](https://github.com/rgormcl/Plantilla-de-Apunte/blob/master/LICENSE)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/rgormcl/Plantilla-de-Apunte)
 
 Una plantilla desarrollada en LaTeX para tus apuntes de clases o ramos.
 
