@@ -13,6 +13,9 @@ clean_junk:
 	rm -f *.lot;
 	rm -f *.out;
 	rm -f *.toc;
+	rm -f *.synctex.gz;
+	rm -f *.fdb_latexmk;
+	rm -f *.fls;
 
 clean_pdf:
 	rm -f *.pdf

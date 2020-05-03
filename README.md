@@ -4,7 +4,8 @@
 [![GitHub forks](https://img.shields.io/github/forks/rgormcl/Plantilla-de-Apunte)](https://github.com/rgormcl/Plantilla-de-Apunte/network)
 [![GitHub stars](https://img.shields.io/github/stars/rgormcl/Plantilla-de-Apunte)](https://github.com/rgormcl/Plantilla-de-Apunte/stargazers)
 [![GitHub license](https://img.shields.io/github/license/rgormcl/Plantilla-de-Apunte)](https://github.com/rgormcl/Plantilla-de-Apunte/blob/master/LICENSE)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/rgormcl/Plantilla-de-Apunte)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/rgormcl/Plantilla-de-Apunte)](https://github.com/rgormcl/Plantilla-de-Apunte/releases)
+[![GitHub downloads for all releases](https://img.shields.io/github/downloads/rgormcl/Plantilla-de-Apunte/total)](https://github.com/rgormcl/Plantilla-de-Apunte/releases/latest/download/Plantilla-Apunte.zip)
 
 Una plantilla desarrollada en LaTeX para tus apuntes de clases o ramos.
 
@@ -67,7 +68,7 @@ Versiones anteriores:
 
 La plantilla viene con información y textos de ejemplo para mostrar la utilización de sus características, aprovéchalas para inspirarte, modificarlas, eliminarlas, copiarlas y pegarlas por doquier.
 
-Una demostración disponible de la plantilla se encuentra en el binario (`.pdf`).
+Una demostración disponible de la plantilla se encuentra en el binario ([`examples/Plantilla de Apunte.pdf`](https://github.com/rgormcl/Plantilla-de-Apunte/raw/master/examples/Plantilla%20de%20Apunte.pdf)).
 
 ## Compilación del Proyecto
 
