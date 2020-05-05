@@ -5,7 +5,6 @@
 [![GitHub stars](https://img.shields.io/github/stars/rgormcl/Plantilla-de-Apunte)](https://github.com/rgormcl/Plantilla-de-Apunte/stargazers)
 [![GitHub license](https://img.shields.io/github/license/rgormcl/Plantilla-de-Apunte)](https://github.com/rgormcl/Plantilla-de-Apunte/blob/master/LICENSE)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/rgormcl/Plantilla-de-Apunte)](https://github.com/rgormcl/Plantilla-de-Apunte/releases)
-[![GitHub downloads for all releases](https://img.shields.io/github/downloads/rgormcl/Plantilla-de-Apunte/total)](https://github.com/rgormcl/Plantilla-de-Apunte/releases/latest/download/Plantilla-Apunte.zip)
 
 Una plantilla desarrollada en LaTeX para tus apuntes de clases o ramos.
 
@@ -72,22 +71,35 @@ Una demostración disponible de la plantilla se encuentra en el binario ([`examp
 
 ## Compilación del Proyecto
 
-Puedes utilizar cualquier editor de texto/LaTeX que tengas instalado. Personalmente recomiendo [VSCode](https://code.visualstudio.com/) con la extensión [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), ambos son gratuitos y multiplataforma (Windows, Mac, GNU/Linux...).
+### Prerrequisitos
 
-Para compilar necesitas tener instalada una versión de TeX:
+- Para compilar necesitas tener instalada una versión de TeX:
 
-- Recomiendo [Tex Live](https://www.tug.org/texlive/) (Multiplataforma).
+  - Recomiendo [Tex Live](https://www.tug.org/texlive/) (Multiplataforma).
+
+    - Instalación completa en Ubuntu:  
+
+      `sudo apt install texlive-full`
+
+  - Otra que recomiendo es [ProText](https://www.tug.org/protext/) (solo para Windows).
+
+- Puedes utilizar cualquier editor de texto/LaTeX que tengas instalado.  
+Personalmente recomiendo [VSCode](https://code.visualstudio.com/) con la extensión [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), ambos son gratuitos y multiplataforma (Windows, Mac, GNU/Linux...).
   
-  - Instalación completa en Ubuntu:  
+### Compilación
 
-    `sudo apt install texlive-full`
-  
-- Otra que recomiendo es [ProText](https://www.tug.org/protext/) (solo para Windows).
-  
-Para compilar en [VSCode](https://code.visualstudio.com/) con la extensión [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), deberás abrir el archivo `Plantilla de Apunte.tex` y compilarlo con las teclas (`Ctrl + Alt + B`), automáticamente se generan los binarios. Otra forma es simplemente guardando el documento.
+- Para compilar en [VSCode](https://code.visualstudio.com/) con la extensión [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop), deberás abrir el archivo `Plantilla de Apunte.tex` y compilarlo con las teclas (`Ctrl + Alt + B`), automáticamente se generan los binarios. Otra forma es simplemente guardando el documento.
 
-También es posible compilar utilizando `make` proveído por el `Makefile`.
+- También es posible compilar utilizando `make` proveído por el `Makefile`.
+
+## Contribuir  
+
+Pasos para contribuir:
+
+1. Crea un fork del proyecto.
+2. Añade/Arregla algo.
+3. Crea una pull request.  
 
 ## Errores
 
-Si encuentras un error en la plantilla no dudes en publicar un `issue`.  
+Si encuentras un error en la plantilla no dudes en publicar un `issue` [aquí](https://github.com/rgormcl/Plantilla-de-Apunte/issues).  
