@@ -41,6 +41,7 @@ Una plantilla desarrollada en LaTeX para tus apuntes de clases o ramos.
             System.out.println("Hola Mundo");
         }
     }
+    \end{lstlisting}
     ```
 
     ![Listings Example](https://raw.githubusercontent.com/rgormcl/Plantilla-de-Apunte/master/images/Listings-480.png)
@@ -92,7 +93,7 @@ Personalmente recomiendo [VSCode](https://code.visualstudio.com/) con la extensi
 
 - También es posible compilar utilizando `make` proveído por el `Makefile`.
 
-## Contribuir  
+## Contribuciones
 
 Pasos para contribuir:
 
