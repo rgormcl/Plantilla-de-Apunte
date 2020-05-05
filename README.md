@@ -18,7 +18,7 @@ Una plantilla desarrollada en LaTeX para tus apuntes de clases o ramos.
     \end{exampleblock}
     ```
 
-    ![InfoBlock Example](https://raw.githubusercontent.com/rgormcl/Plantilla-de-Apunte/master/images/ExampleBlock.png)
+    ![InfoBlock Example](https://raw.githubusercontent.com/rgormcl/Plantilla-de-Apunte/master/images/ExampleBlock-480.png)
 
 2. Índices para cada uno de los bloques, tablas, figuras y listings (bloques con código fuente).
 
@@ -30,7 +30,7 @@ Una plantilla desarrollada en LaTeX para tus apuntes de clases o ramos.
     \end{infoblock*}
     ```
 
-    ![InfoBlock* Example](https://raw.githubusercontent.com/rgormcl/Plantilla-de-Apunte/master/images/InfoBlockW.png)
+    ![InfoBlock* Example](https://raw.githubusercontent.com/rgormcl/Plantilla-de-Apunte/master/images/InfoBlockW-480.png)
 
 4. Soporte para añadir bloques de código fuente dentro del documento de manera ordenada y limpia utilizando `listings`.
 
@@ -43,7 +43,7 @@ Una plantilla desarrollada en LaTeX para tus apuntes de clases o ramos.
     }
     ```
 
-    ![Listings Example](https://raw.githubusercontent.com/rgormcl/Plantilla-de-Apunte/master/images/Listings.png)
+    ![Listings Example](https://raw.githubusercontent.com/rgormcl/Plantilla-de-Apunte/master/images/Listings-480.png)
 
 5. Sangría e indentación del texto y títulos mejorada.
 
